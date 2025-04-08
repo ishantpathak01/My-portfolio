@@ -5,14 +5,13 @@
 }
 
 body {
-    background:  rgb(4, 12, 26);
+    background: rgb(4, 12, 26);
     background-size: 400% 400%;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
 
 nav {
     display: flex;
@@ -45,25 +44,22 @@ nav {
     transform: scale(1.2);
 }
 
-nav ul  {
+nav ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 60px;
     list-style: none;
-    font-style: initial;
 }
 
 nav ul li a {
-    list-style: none;
-    color:  #00ffe7;
+    color: #00ffe7;
     cursor: pointer;
     font-size: 1.1rem;
     position: relative;
     transition: all 0.3s ease;
     text-decoration: none;
-    
 }
 
 nav ul li a::after {
@@ -82,19 +78,17 @@ nav ul li a:hover {
     transform: scale(1.02);
 }
 
-
-hr{
-    margin-left: 30rem;
-    margin-right: 30rem;
-   background-color: #00ffff;
-    height: 2px;
-    border: none;
-}
-
 nav ul li a:hover::after {
     width: 100%;
 }
 
+hr {
+    margin-left: 30rem;
+    margin-right: 30rem;
+    background-color: #00ffff;
+    height: 2px;
+    border: none;
+}
 
 .main-section {
     display: flex;
@@ -163,68 +157,58 @@ nav ul li a:hover::after {
     }
 }
 
-
 .secondsection, .thirdsection, .fourthsection {
     height: 80vh;
-    background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,74,161,1) 0%, rgba(101,202,222,1) 100%);
     margin: 10px 30px;
     border-radius: 90px;
 }
+
 .secondsection h1,
-.thirdsection h1
-   {color:  rgb(4, 12, 26);
+.thirdsection h1,
+.fourthsection h1 {
+    color: rgb(4, 12, 26);
     font-size: 2.4rem;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 20px;
-   }
-   .textdivider {
+}
+
+.textdivider {
     height: 2px;
     margin: 0 auto 30px auto;
     width: 25%;
-    background-color: rgb(99, 195, 198)
+    background-color: rgb(99, 195, 198);
+}
 
-   }
-   .projectsection-box {
-      height: 250px;
-      width: 350px;
-      background: rgb(238,174,202);
-      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(68,115,129,1) 100%);
-      border-radius: 20px;
-      margin-left: 30px;
-      cursor: pointer;
-      transition: transform 0.5s ease;
-      object-fit: cover;
+.projectsection-box {
+    height: 250px;
+    width: 350px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(68,115,129,1) 100%);
+    border-radius: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}
 
-   }
-   .projectsection-box:hover  {
+.projectsection-box:hover {
     transform: scale(1.1);
-   }
+}
 
- .projects {
+.projects {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
+
 .image img {
     height: 200px;
     width: 300px;
     border-radius: 10px;
-    margin-right: 20rem;
-    margin-left: 25px;
-    margin-top: 22px;
-}
-
-
-.fourthsection h1{
-    color:  rgb(4, 12, 26);
-    font-size: 2.4rem;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 20px;
-
+    margin: 22px 25px;
 }
 
 .SKILLS, .moreskills, .extraskill {
@@ -235,17 +219,10 @@ nav ul li a:hover::after {
     padding-top: 25px;
 }
 
-
 @keyframes pulseAndRotate {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-    50% {
-        transform: scale(1.1) rotate(5deg);
-    }
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); }
 }
 
 .SKILLS img,
@@ -266,13 +243,11 @@ nav ul li a:hover::after {
     cursor: pointer;
 }
 
-
 .divider {
     height: .5px;
     margin: 20px 14rem;
     background-color: rgb(177, 157, 157);
 }
-
 
 .PLATFORM {
     display: flex;
@@ -295,16 +270,12 @@ nav ul li a:hover::after {
     filter: drop-shadow(0 0 15px #040c1a);
     cursor: pointer;
 }
-.platformdivider{
+
+.platformdivider {
     height: 2.5px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    background-color:  rgb(99, 195, 198);
-    margin-left: 26rem;
-    margin-right: 26rem;
-
+    margin: 0 26rem 10px 26rem;
+    background-color: rgb(99, 195, 198);
 }
-
 
 .fifthsection {
     display: flex;
@@ -312,10 +283,9 @@ nav ul li a:hover::after {
     align-items: center;
     padding: 0 40px;
     height: 100px;
-    border-radius: 50px;
-    background: linear-gradient(270deg,#0896a9 ,#24ae73);
-    margin: 20px 30px 0 30px;
     border-radius: 30px;
+    background: linear-gradient(270deg, #0896a9, #24ae73);
+    margin: 20px 30px 0 30px;
 }
 
 .socialmedia {
@@ -346,4 +316,97 @@ nav ul li a:hover::after {
 .name-highlight:hover {
     text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
     color: #ffffff;
+}
+
+/* 🌐 RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        position: static;
+        transform: none;
+    }
+
+    .main-section {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .leftsection, .rightsection {
+        width: 100%;
+    }
+
+    .rightsection img {
+        max-width: 250px;
+        margin-top: 20px;
+    }
+
+    .secondsection, .thirdsection, .fourthsection {
+        margin: 10px 10px;
+        border-radius: 40px;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .projectsection-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+
+    .image img {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .SKILLS, .moreskills, .extraskill, .PLATFORM {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .PLATFORM img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .divider, .platformdivider, hr {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .fifthsection {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .socialmedia img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .leftsection h1 {
+        font-size: 2.2rem;
+    }
+
+    .leftsection h3 {
+        font-size: 1.2rem;
+    }
+
+    .leftsection p {
+        font-size: 0.95rem;
+    }
 }
