@@ -89,20 +89,24 @@ hr {
     height: 2px;
     border: none;
 }
-
 .main-section {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 90px 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 80px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 50px;
 }
 
 .leftsection {
-    width: 50%;
+    flex: 1 1 500px;
+    min-width: 300px;
 }
 
 .leftsection h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 20px;
@@ -118,22 +122,21 @@ hr {
 .leftsection h3 {
     font-size: 1.5rem;
     color: #00fffb;
-    opacity: 0.9;
     margin-bottom: 15px;
 }
 
 .leftsection p {
     font-size: 1rem;
-    line-height: 1.5;
-    opacity: 0.8;
-    max-width: 90%;
-    color: #ffffff;
+    line-height: 1.6;
+    color: #ddd;
+    max-width: 600px;
 }
 
 .rightsection {
-    width: 40%;
+    flex: 1 1 400px;
+    min-width: 300px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .rightsection img {
@@ -147,6 +150,7 @@ hr {
 .rightsection img:hover {
     filter: drop-shadow(0 0 30px #00ffff);
 }
+
 
 @keyframes floatUpDown {
     0%, 100% {
@@ -181,35 +185,39 @@ hr {
     background-color: rgb(99, 195, 198);
 }
 
-.projectsection-box {
-    height: 250px;
-    width: 350px;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(68,115,129,1) 100%);
-    border-radius: 20px;
-    margin-left: 30px;
-    cursor: pointer;
-    transition: transform 0.5s ease;
-    object-fit: cover;
-}
-
-.projectsection-box:hover {
-    transform: scale(1.1);
-}
-
 .projects {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
     flex-wrap: wrap;
+    gap: 20px;
+}
+
+.projectsection-box {
+    height: auto;
+    width: 320px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(68,115,129,1) 100%);
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.projectsection-box:hover {
+    transform: scale(1.05);
 }
 
 .image img {
-    height: 200px;
-    width: 300px;
+    height: auto;
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
-    margin: 22px 25px;
+    margin: 10px auto;
 }
+
 
 .SKILLS, .moreskills, .extraskill {
     display: flex;
@@ -318,88 +326,17 @@ hr {
     color: #ffffff;
 }
 
-/* 🌐 RESPONSIVE STYLES */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        position: static;
-        transform: none;
-    }
-
+    
+/* ===================== TABLETS ===================== */
+@media (max-width: 1024px) {
     .main-section {
         flex-direction: column;
-        padding: 40px 20px;
+        padding: 60px 30px;
         text-align: center;
     }
 
-    .leftsection, .rightsection {
-        width: 100%;
-    }
-
-    .rightsection img {
-        max-width: 250px;
-        margin-top: 20px;
-    }
-
-    .secondsection, .thirdsection, .fourthsection {
-        margin: 10px 10px;
-        border-radius: 40px;
-        height: auto;
-        padding: 20px 10px;
-    }
-
-    .projectsection-box {
-        width: 90%;
-        margin: 20px auto;
-    }
-
-    .projects {
-        flex-direction: column;
-    }
-
-    .image img {
-        width: 90%;
-        height: auto;
-        margin: 20px auto;
-    }
-
-    .SKILLS, .moreskills, .extraskill, .PLATFORM {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .PLATFORM img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .divider, .platformdivider, hr {
-        margin: 20px auto;
-        width: 80%;
-    }
-
-    .fifthsection {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .socialmedia img {
-        width: 25px;
-        height: 25px;
-    }
-
     .leftsection h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .leftsection h3 {
@@ -407,6 +344,100 @@ hr {
     }
 
     .leftsection p {
-        font-size: 0.95rem;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .rightsection img {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .secondsection,
+    .thirdsection,
+    .fourthsection {
+        height: auto;
+        padding: 50px 20px;
+        border-radius: 50px;
+        margin: 10px 20px;
+    }
+
+    .secondsection h1,
+    .thirdsection h1,
+    .fourthsection h1 {
+        font-size: 2.2rem;
+    }
+
+    .textdivider {
+        width: 40%;
+        height: 2px;
+    }
+
+    .projects {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .projectsection-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .image img {
+        width: 90%;
+        height: auto;
+        margin: 12px auto;
+    }
+
+    .SKILLS img,
+    .moreskills img,
+    .extraskill img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .PLATFORM img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .divider,
+    .platformdivider {
+        margin: 20px 6rem;
+    }
+
+    .fifthsection {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 15px;
+        height: auto;
+    }
+
+    .socialmedia {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 }
+
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+    }
+}
+
