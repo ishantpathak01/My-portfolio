@@ -89,24 +89,24 @@ hr {
     height: 2px;
     border: none;
 }
+
+
+
+   
+
 .main-section {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 80px 60px;
-    max-width: 1300px;
-    margin: 0 auto;
-    gap: 50px;
+    padding: 90px 80px;
 }
 
 .leftsection {
-    flex: 1 1 500px;
-    min-width: 300px;
+    width: 50%;
 }
 
 .leftsection h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 20px;
@@ -122,21 +122,22 @@ hr {
 .leftsection h3 {
     font-size: 1.5rem;
     color: #00fffb;
+    opacity: 0.9;
     margin-bottom: 15px;
 }
 
 .leftsection p {
     font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd;
-    max-width: 600px;
+    line-height: 1.5;
+    opacity: 0.8;
+    max-width: 90%;
+    color: #ffffff;
 }
 
 .rightsection {
-    flex: 1 1 400px;
-    min-width: 300px;
+    width: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .rightsection img {
@@ -151,7 +152,6 @@ hr {
     filter: drop-shadow(0 0 30px #00ffff);
 }
 
-
 @keyframes floatUpDown {
     0%, 100% {
         transform: translateY(0px);
@@ -160,6 +160,7 @@ hr {
         transform: translateY(-20px);
     }
 }
+
 
 .secondsection, .thirdsection, .fourthsection {
     height: 80vh;
