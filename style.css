@@ -202,18 +202,20 @@ hr {
     }
 }
 
-
-.secondsection, .thirdsection, .fourthsection {
+.secondsection,
+.thirdsection,
+.fourthsection {
     height: 80vh;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,74,161,1) 0%, rgba(101,202,222,1) 100%);
-    margin: 10px 30px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(74, 74, 161, 1) 0%, rgba(101, 202, 222, 1) 100%);
     border-radius: 90px;
+    width: 50%;
+   
 }
 
 .secondsection h1,
 .thirdsection h1,
 .fourthsection h1 {
-    color: rgb(4, 12, 26);
+    color: rgb(239, 241, 246);
     font-size: 2.4rem;
     text-align: center;
     margin-top: 15px;
@@ -239,7 +241,7 @@ hr {
 .projectsection-box {
     height: auto;
     width: 320px;
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(68,115,129,1) 100%);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(68, 115, 129, 1) 100%);
     border-radius: 20px;
     padding: 10px;
     transition: transform 0.5s ease;
@@ -261,7 +263,9 @@ hr {
 }
 
 
-.SKILLS, .moreskills, .extraskill {
+.SKILLS,
+.moreskills,
+.extraskill {
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -270,9 +274,17 @@ hr {
 }
 
 @keyframes pulseAndRotate {
-    0% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.1) rotate(5deg); }
-    100% { transform: scale(1) rotate(0deg); }
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 .SKILLS img,
@@ -368,7 +380,7 @@ hr {
     color: #ffffff;
 }
 
-    
+
 /* ===================== TABLETS ===================== */
 @media (max-width: 1024px) {
     .main-section {
@@ -482,4 +494,10 @@ hr {
         padding: 6px 8px;
     }
 }
+
+
+
+
+
+
 
