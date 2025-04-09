@@ -30,7 +30,7 @@ nav {
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
-    box-shadow: 0 0 15px #00ffe7, 0 0 30px #00ffe7;
+    box-shadow: 0 0 6px #00ffe7, 0 0 10px #00ffe7;
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
