@@ -5,7 +5,7 @@
 }
 
 body {
-    background: rgb(4, 12, 26);
+    background-color: #040c1a;
     background-size: 400% 400%;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,9 +18,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    padding: 0 40px;
-    background-color: rgb(4, 12, 26);
+    padding: 0px 40px;
+    background-color: #040c1a;
     position: relative;
+    margin-top: 10px;
 }
 
 .logo {
@@ -30,7 +31,7 @@ nav {
 }
 
 .logo img {
-      width: 50px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
@@ -38,6 +39,7 @@ nav {
     box-shadow: 0 0 6px #00ffe7, 0 0 10px #00ffe7;
     transform: scale(1.1);
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
 .logo img:hover {
@@ -85,45 +87,51 @@ nav ul li a:hover::after {
 hr {
     margin-left: 30rem;
     margin-right: 30rem;
-    background-color: #00ffff;
+    background-color: #00ffe7;
     height: 2px;
     border: none;
 }
 
 
 
-   
+
 
 .main-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 90px 80px;
+    padding: 90px 70px;
+
 }
 
 .leftsection {
     width: 50%;
 }
 
-.leftsection h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
+#typing-text {
+    font-size: 50px;
+    color: #00ffcc;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ffcc;
+    width: fit-content;
+    animation: blink 0.7s step-end infinite;
 }
 
-.leftsection h1:hover {
-    color: #00ffe7;
-    text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 .leftsection h3 {
     font-size: 1.5rem;
-    color: #00fffb;
+    color: #00ff5e;
     opacity: 0.9;
     margin-bottom: 15px;
+
 }
 
 .leftsection p {
@@ -132,6 +140,36 @@ hr {
     opacity: 0.8;
     max-width: 90%;
     color: #ffffff;
+}
+
+.leftsection img {
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    gap: 0px;
+    margin-left: 10px;
+    filter: drop-shadow(0 0 8px #02ffe6);
+    cursor: pointer;
+}
+.zoome.zoom-effect {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.1);
+  }
+  
+
+.leftsection button {
+    margin-top: 30px;
+    height: 40px;
+    width: 6rem;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #11c29e;
+    border: none;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .rightsection {
@@ -144,18 +182,21 @@ hr {
     width: 100%;
     max-width: 400px;
     animation: floatUpDown 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 15px #00ffff);
+    filter: drop-shadow(0 0 15px #02ffe6);
     transition: filter 0.3s ease-in-out;
 }
 
 .rightsection img:hover {
-    filter: drop-shadow(0 0 30px #00ffff);
+    filter: drop-shadow(0 0 30px #00ffe7);
 }
 
 @keyframes floatUpDown {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
