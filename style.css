@@ -5,12 +5,32 @@
 }
 
 body {
+    margin: 0;
     background-color: #040c1a;
-    background-size: 400% 400%;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-    overflow-y: scroll;
+    
+
+  }
+
+  .star {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #00ffcc;
+    border-radius: 50%;
+   
+    animation: starTrail 3s linear forwards;
+  }
+
+  @keyframes starTrail {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-200px, 200px) scale(0);
+      opacity: 0;
+    }
 }
 
 nav {
@@ -167,7 +187,7 @@ hr {
     background-color: #11c29e;
     border: none;
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+font-family: initial;
 }
 
 .rightsection {
@@ -180,13 +200,14 @@ hr {
     width: 100%;
     max-width: 400px;
     animation: floatUpDown 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 15px #02ffe6);
+    filter: drop-shadow(0 0 15px #00ffff);
     transition: filter 0.3s ease-in-out;
 }
 
 .rightsection img:hover {
-    filter: drop-shadow(0 0 30px #00ffe7);
+    filter: drop-shadow(0 0 30px #00ffff);
 }
+
 
 @keyframes floatUpDown {
 
@@ -213,13 +234,14 @@ hr {
 
 .secondsection, .thirdsection, .fourthsection {
     height: 80vh;
-    background-color: rgb(88, 129, 155);
+    background-color: #a9eeee;;
     margin: 10px 30px;
     border-radius: 90px;
+    border: 4px solid rgb(11, 120, 113);
 }
 .secondsection h1,
 .thirdsection h1
-   {color: #ffffff;
+   {color: #00284e;
     font-size: 2.4rem;
     text-align: center;
     margin-top: 15px;
@@ -234,31 +256,18 @@ hr {
 }
 .projects img {
     height: 200px;
-    width: 300px;
-    margin-left: 90px;
+    width: 400px;
     margin-top: 30px;
     border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
-.project-box {
-    background-color: #ffffff10; /* Slightly transparent white */
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.project-box:hover {
+.projects img:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
-.project-box img {
-    height: 200px;
-    width: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-}
 
 .fourthsection h1{
-    color: #ffffff;
+    color: #00284e;
     font-size: 2.4rem;
     text-align: center;
     margin-top: 15px;
@@ -289,9 +298,8 @@ hr {
 .SKILLS img,
 .moreskills img,
 .extraskill img {
-    height: 100px;
-    width: 100px;
-    animation: pulseAndRotate 4s ease-in-out infinite;
+    height: 90px;
+    width: 90px;
     transition: transform 0.4s ease, filter 0.4s ease;
     border-radius: 20px;
 }
@@ -299,8 +307,8 @@ hr {
 .SKILLS img:hover,
 .moreskills img:hover,
 .extraskill img:hover {
-    transform: scale(1.3) rotate(10deg);
-    filter: drop-shadow(0 0 20px #ffffff);
+    transform: scale(1.1) ;
+    
     cursor: pointer;
 }
 
@@ -315,21 +323,20 @@ hr {
 .PLATFORM {
     display: flex;
     justify-content: center;
-    gap: 70px;
+    gap: 110px;
     flex-wrap: wrap;
 }
 
 .PLATFORM img {
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     border-radius: 30px;
     margin-left: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .PLATFORM img:hover {
-    transform: scale(1.1) rotate(2deg);
-    filter: drop-shadow(0 0 15px #040c1a);
+    transform: scale(1.1) ;
     cursor: pointer;
 }
 
@@ -340,9 +347,10 @@ hr {
     align-items: center;
     padding: 0 40px;
     height: 100px;
-    background-color: rgb(88, 129, 155);
+    background-color: rgb(160, 234, 239);
     margin: 20px 30px 0 30px;
     border-radius: 30px;
+    border: 4px solid rgb(4, 84, 77);
 }
 
 .socialmedia {
@@ -358,137 +366,383 @@ hr {
 }
 
 .socialmedia img:hover {
-    transform: scale(1.3) rotate(5deg);
-    filter: drop-shadow(0 0 10px #781212);
+    transform: scale(1.2) ;
     cursor: pointer;
 }
 
 .name-highlight {
-    color: #00ffe7;
+    color: #0c6ade;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .name-highlight:hover {
-    text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
-    color: #ffffff;
+    text-shadow: 0 0 5px #038f81, 0 0 10px #004f47, 0 0 20px #00ffe7;
+    color: #00ffaa;
 }
-
-
 /* ===================== TABLETS ===================== */
 @media (max-width: 1024px) {
     .main-section {
-        flex-direction: column;
-        padding: 60px 30px;
-        text-align: center;
+      flex-direction: column;
+      padding: 60px 30px;
+      text-align: center;
     }
-
+  
     .leftsection h1 {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-
+  
     .leftsection h3 {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-
+  
     .leftsection p {
-        font-size: 1rem;
-        margin-top: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
     }
-
+  
     .rightsection img {
-        max-width: 300px;
-        height: auto;
+      max-width: 300px;
+      height: auto;
     }
-
+  
     .secondsection,
     .thirdsection,
     .fourthsection {
-        height: auto;
-        padding: 50px 20px;
-        border-radius: 50px;
-        margin: 10px 20px;
+      height: auto;
+      padding: 50px 20px;
+      border-radius: 50px;
+      margin: 10px 20px;
     }
-
+  
     .secondsection h1,
     .thirdsection h1,
     .fourthsection h1 {
-        font-size: 2.2rem;
+      font-size: 2.2rem;
     }
-
-    .textdivider {
-        width: 40%;
-        height: 2px;
-    }
-
+  
     .projects {
-        flex-direction: column;
-        gap: 25px;
+      flex-direction: column;
+      gap: 25px;
     }
-
+  
     .projectsection-box {
-        width: 90%;
-        margin: 20px auto;
+      width: 90%;
+      margin: 20px auto;
     }
-
+  
     .image img {
-        width: 90%;
-        height: auto;
-        margin: 12px auto;
+      width: 90%;
+      height: auto;
+      margin: 12px auto;
     }
-
+  
     .SKILLS img,
     .moreskills img,
     .extraskill img {
-        width: 90px;
-        height: 90px;
+      width: 90px;
+      height: 90px;
     }
-
+  
     .PLATFORM img {
-        width: 140px;
-        height: 140px;
+      width: 140px;
+      height: 140px;
     }
-
+  
     .divider,
     .platformdivider {
-        margin: 20px 6rem;
+      margin: 20px 6rem;
     }
-
+  
     .fifthsection {
-        flex-direction: column;
-        padding: 30px 20px;
-        gap: 15px;
-        height: auto;
+      flex-direction: column;
+      padding: 30px 20px;
+      gap: 15px;
+      height: auto;
     }
-
+  
     .socialmedia {
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-}
-
-
-@media (max-width: 480px) {
+  }
+  
+  /* ===================== PHONES ===================== */
+  @media (max-width: 480px) {
     nav {
-        padding: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      padding: 15px 10px;
+      gap: 10px;
     }
-
+  
+    .logo {
+      margin-bottom: 10px;
+    }
+  
     .logo img {
-        width: 40px;
-        height: 40px;
+      width: 40px;
+      height: 40px;
+      margin-top: 0;
     }
-
+  
     nav ul {
-        gap: 12px;
+      position: static;
+      transform: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 0;
     }
-
+  
+    nav ul li {
+      width: 100%;
+      text-align: center;
+    }
+  
     nav ul li a {
-        font-size: 0.85rem;
-        padding: 6px 8px;
+      display: inline-block;
+      font-size: 1rem;
+      color: #00ffe7;
+      text-decoration: none;
+      padding: 8px 0;
+      width: 100%;
+      transition: background 0.2s;
     }
-}
+  
+    nav ul li a:hover {
+      background-color: rgba(0, 255, 231, 0.1);
+      border-radius: 10px;
+    }
+  
+    .main-section {
+      flex-direction: column;
+      padding: 30px 20px;
+      text-align: center;
+      gap: 30px;
+    }
+  
+    #typing-text {
+      font-size: 1.8rem;
+      border-right: 2px solid #00ffcc;
+    }
+  
+    .leftsection, .rightsection {
+      width: 100%;
+    }
+  
+    .leftsection h3 {
+      font-size: 1.2rem;
+    }
+  
+    .leftsection p {
+      font-size: 0.95rem;
+      max-width: 100%;
+    }
+  
+    .leftsection img {
+      height: 25px;
+      width: 25px;
+      margin: 10px 5px 0 5px;
+    }
+  
+    .leftsection button {
+      width: 100%;
+      height: 40px;
+      font-size: 1rem;
+    }
+  
+    .rightsection img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .secondsection,
+    .thirdsection,
+    .fourthsection {
+      padding: 20px;
+      margin: 10px;
+      border-radius: 20px;
+      height: auto;
+    }
+  
+    .secondsection h1,
+    .thirdsection h1,
+    .fourthsection h1 {
+      font-size: 1.8rem;
+    }
+  
+    .projects {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .projects img {
+      width: 90%;
+      height: auto;
+    }
+  
+    .SKILLS,
+    .moreskills,
+    .extraskill,
+    .PLATFORM {
+      gap: 25px;
+      padding-top: 20px;
+    }
+  
+    .SKILLS img,
+    .moreskills img,
+    .extraskill img,
+    .PLATFORM img {
+      width: 65px;
+      height: 65px;
+    }
+  
+    .divider {
+      margin: 10px 2rem;
+    }
+  
+    .fifthsection {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .socialmedia {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .socialmedia img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+/* ===================== TABLETS ===================== */
+@media (min-width: 481px) and (max-width: 1024px) {
+    nav {
+      padding: 20px 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .logo img {
+      width: 45px;
+      height: 45px;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      gap: 16px;
+      padding: 0;
+      position: static;
+      transform: none;
+    }
+  
+    nav ul li a {
+      font-size: 0.95rem;
+      padding: 6px 10px;
+    }
+  
+    .main-section {
+      flex-direction: row;
+      padding: 50px 30px;
+      text-align: left;
+    }
+  
+    .leftsection h1 {
+      font-size: 2.2rem;
+    }
+  
+    .leftsection h3 {
+      font-size: 1.1rem;
+    }
+  
+    .leftsection p {
+      font-size: 0.95rem;
+      margin-top: 12px;
+    }
+  
+    .rightsection img {
+      max-width: 320px;
+      height: auto;
+    }
+  
+    .secondsection,
+    .thirdsection,
+    .fourthsection {
+      padding: 50px 25px;
+      margin: 20px 30px;
+      border-radius: 40px;
+      height: auto;
+    }
+  
+    .secondsection h1,
+    .thirdsection h1,
+    .fourthsection h1 {
+      font-size: 2rem;
+    }
+  
+    .projects {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+  
+    .projectsection-box {
+      width: 85%;
+      margin: 20px auto;
+    }
+  
+    .image img {
+      width: 90%;
+      height: auto;
+    }
+  
+    .SKILLS img,
+    .moreskills img,
+    .extraskill img {
+      width: 75px;
+      height: 75px;
+    }
+  
+    .PLATFORM img {
+      width: 110px;
+      height: 110px;
+    }
+  
+    .divider,
+    .platformdivider {
+      margin: 20px 4rem;
+    }
+  
+    .fifthsection {
+      flex-direction: column;
+      padding: 35px 25px;
+      gap: 18px;
+      height: auto;
+    }
+  
+    .socialmedia {
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+  
+    .socialmedia img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
 
 
 
