@@ -12,9 +12,61 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="/">
-                     <img src="logo ani.png" alt="logo" />
+                <a href="">
+                    <img src="logo ani.png" alt="logo" />
                 </a>
+            </a>
+            <div class="stars">
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
+             <div class="star"></div>
             </div>
             <ul>
                 <li> <a href="index.html">Home</li></a>
@@ -28,7 +80,7 @@
     </header>
     <section class="main-section">
         <div class="firstsection">
-            <h1>about us</h1>
+            <h1>ABOUT US</h1>
             <div class="divider"></div>
             <div class="content">
             <p>Hi! I'm Ishant Pathak, a passionate and creative web developer with a love for crafting interactive, user-friendly websites. I specialize in front-end development using HTML, CSS, JavaScript, and modern frameworks to bring ideas to life. Whether it's designing sleek portfolios, building responsive layouts, or experimenting with animations, I'm always exploring new ways to push the web forward.
@@ -40,6 +92,21 @@
         </div>
 
 </body>
+<script>
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(star);
+
+      setTimeout(() => {
+        star.remove();
+      }, 2000);
+    }
+
+    setInterval(createStar, 100); // Adjust for more or fewer stars
+  </script>
 
 </html>
 </section>
