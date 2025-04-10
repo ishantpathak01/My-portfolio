@@ -18,6 +18,89 @@
         <a href="">
           <img src="logo ani.png" alt="logo" />
         </a>
+         <div class="stars">
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+          <div class="star"></div>
+        </a>
+        <div class="stars">
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+         <div class="star"></div>
+        </div>
+
       </div>
       <ul>
         <li> <a href="">Home</li></a>
@@ -41,10 +124,10 @@
           I enjoy solving complex problems and learning new skills. I am always looking
           for new challenges and opportunities to grow.
         </p>
-        <img src="images/facebook (1).png" class="zoom-effect" />
-        <img src="images/github (2).png" class="zoom-effect" />
-        <img src="images/linkedin.png" class="zoom-effect" />
-        <img src="images/instagram (1).png" class="zoom-effect" />
+        <a href="https://facebook.com/ishant.pathak.1"><img src="images/facebook (1).png" class="zoom-effect" /></a>
+        <a href="https://github.com/ishantpathak01"><img src="images/github (2).png" class="zoom-effect" /></a>
+        <a href="https://www.linkedin.com/in/ishant-pathak-2b5961268/"><img src="images/linkedin.png" class="zoom-effect" /></a>
+        <a href="https://www.instagram.com/ishant_pathak__01/"><img src="images/instagram (1).png" class="zoom-effect" /></a>
 
         <h1><button type="submit">
             Resume
@@ -107,7 +190,7 @@
             <a href="https://facebook.com/ishant.pathak.1" target="_blank">
               <img src="images/facebook (1).png"alt="Facebook" />
             </a>
-            <a href="https://github.com/ishantpathak01" target="_blank">
+            <a href="`https://github.com/ishantpathak01" target="_blank">
               <img src="images/github (2).png"/>
             </a>
             <a href="https://www.linkedin.com/in/ishant-pathak-2b5961268/" target="_blank">
@@ -142,6 +225,27 @@
 
   window.onload = typeWriter;
 </script>
+
+<body>
+  <script>
+    function createStar() {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      document.body.appendChild(star);
+
+      setTimeout(() => {
+        star.remove();
+      }, 2000);
+    }
+
+    setInterval(createStar, 100); // Adjust for more or fewer stars
+  </script>
+</body>
+
+
+</html>
 
 
 
