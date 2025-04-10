@@ -1,22 +1,48 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #040c1a;
-    font-family: Arial, sans-serif;
-    color: #fff;
+  margin: 0;
+  background-color: #040c1a;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  
+
 }
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00ffcc;
+  border-radius: 50%;
+ 
+  animation: starTrail 3s linear forwards;
+}
+
+@keyframes starTrail {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-200px, 200px) scale(0);
+    opacity: 0;
+  }
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    padding: 0 40px;
-    background-color: rgb(4, 12, 26);
+    padding: 0px 40px;
+    background-color: #040c1a;
     position: relative;
+    margin-top: 10px;
 }
 
 .logo {
@@ -26,7 +52,7 @@ nav {
 }
 
 .logo img {
-   width: 50px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
@@ -34,31 +60,29 @@ nav {
     box-shadow: 0 0 6px #00ffe7, 0 0 10px #00ffe7;
     transform: scale(1.1);
     transition: all 0.3s ease;
+    margin-top: 20px;
 }
 
 .logo img:hover {
     transform: scale(1.2);
 }
 
-nav ul  {
+nav ul {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 60px;
     list-style: none;
-    font-style: initial;
 }
 
 nav ul li a {
-    list-style: none;
-    color:  #00ffe7;
+    color: #00ffe7;
     cursor: pointer;
     font-size: 1.1rem;
     position: relative;
     transition: all 0.3s ease;
     text-decoration: none;
-    
 }
 
 nav ul li a::after {
@@ -77,31 +101,30 @@ nav ul li a:hover {
     transform: scale(1.02);
 }
 
-
-hr{
-    margin-left: 30rem;
-    margin-right: 30rem;
-   background-color: #00ffff;
-    height: 2px;
-    border: none;
-}
-
 nav ul li a:hover::after {
     width: 100%;
 }
 
+hr {
+    margin-left: 30rem;
+    margin-right: 30rem;
+    background-color: #00ffe7;
+    height: 2px;
+    border: none;
+}
+
+
 .fourthsection {
     display: flexbox;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(74,74,161,1) 0%, rgba(101,202,222,1) 100%);
+    background-color: rgb(160, 234, 239);
     margin: 20px 30px 0 30px;
     border-radius: 30px;
     margin-top: 3rem;
     height: 80vh;
-    box-shadow: 0 10px 25px rgba(126, 197, 208, 0.268); 
+   
 }
 .fourthsection h1{
-    color:  rgb(4, 12, 26);
+    color: #00284e;
     font-size: 2.4rem;
     text-align: center;
     margin-top: 15px;
@@ -128,4 +151,113 @@ nav ul li a:hover::after {
     filter: drop-shadow(0 0 15px #040c1a);
     cursor: pointer;
 }
+
+/* ===================== TABLETS ===================== */
+@media (max-width: 1024px) {
+    nav {
+      flex-direction: column;
+      padding: 10px 20px;
+      height: auto;
+      gap: 10px;
+    }
+  
+    .logo img {
+      width: 45px;
+      height: 45px;
+      margin-top: 10px;
+    }
+  
+    nav ul {
+      position: static;
+      transform: none;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+  
+    nav ul li a {
+      font-size: 1rem;
+    }
+  
+    hr {
+      margin: 20px auto;
+      width: 60%;
+    }
+  
+    .fourthsection {
+      margin: 20px;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .fourthsection h1 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+  
+    .PLATFORM {
+      gap: 40px;
+    }
+  
+    .PLATFORM img {
+      height: 140px;
+      width: 140px;
+    }
+  }
+  
+  /* ===================== PHONES ===================== */
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 10px;
+      height: auto;
+      gap: 10px;
+    }
+  
+    .logo img {
+      width: 40px;
+      height: 40px;
+      margin-top: 5px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 0;
+    }
+  
+    nav ul li a {
+      font-size: 0.95rem;
+    }
+  
+    hr {
+      margin: 10px auto;
+      width: 70%;
+    }
+  
+    .fourthsection {
+      margin: 10px;
+      padding: 20px 10px;
+      height: auto;
+      border-radius: 20px;
+    }
+  
+    .fourthsection h1 {
+      font-size: 1.7rem;
+      margin-bottom: 25px;
+    }
+  
+    .PLATFORM {
+      gap: 25px;
+    }
+  
+    .PLATFORM img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
 
